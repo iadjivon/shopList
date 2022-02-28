@@ -13,7 +13,7 @@ export const GlobalCtx = React.createContext(null);
 function App() { 
 
   const [gState, setGState] = React.useState({                              //Global state property
-    url:"https://621ceeac3fbf8738b13dad77--brave-goodall-15daa2.netlify.app/", 
+    url:"http://localhost:3000", 
     token: null}); 
 
   React.useEffect(()=>{                                                     // runs page once 
