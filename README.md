@@ -1,71 +1,100 @@
+# Shopping List
 
-# Getting Started with Create React App
+## `Shopping List` 
+This is a MERN stack architecture-based Web application that provides users the ability ...
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - to add an item to the shopping list
 
-## Available Scripts
+ - to view their whole shopping list
 
-In the project directory, you can run:
+ - to delete an individual item from the shopping list
 
-### `npm start`
+ - to delete their entire shopping list, with a single button click (without going and deleting each individual item one by one) 
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - Each user must be able to login with their Google account and their shopping list must persist between their logins
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+<hr/>
 
-### `npm test`
+## `Set-Up` 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application uses the MERN stack with:
+  - `Front-end`: React.js
+  - `Server`: Express.js + Node.js
+  - `Database`: MongoDB
 
-### `npm run build`
+### BACKEND
+>- MCV (Models, View, Controllers) configuration
+>- Express.js
+> > - `npm install express` 
+>- MongoDB - database
+>>  - https://www.mongodb.com/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### FRONTEND 
+>- **React App** 
+>>- `npx create-react-app front-end`
+>>- `cd front-end`
+>>- `npm start`
+>  - **Components** 
+>    - `header` - _this holds our navigation and is displayed on all pages_
+>  - **Pages**
+>     - `Dashboard` - _this page holds our list and can only be seen after login_ 
+ >    - `Home` - _this is our welcome page and can be seen without a login information._
+  >     - `Login` - _has prompt to login_
+  >    - `Signup` - _has prompt to 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ## Additional Applications Used 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> - **Postman**: this application was used to test our routes in the backend
+> - **CSS**: this application was used to style the site 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<hr/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ ##  `Resources`
+ 
+ - Review on MERN stack: `https://www.mongodb.com/mern-stack`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ - Building using Node.js: `https://cloud.google.com/nodejs`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ - Authentication/Backend + Front end: 
+    - `https://cloud.google.com/endpoints/docs/frameworks/java/javascript-client`
 
-## Learn More
+    - `http://www.passportjs.org/docs/`
+    
+    - `https://www.youtube.com/watch?v=F-sFp_AvHc8`
+    
+    - `https://git.generalassemb.ly/ira/SEIR-FLEX-ZEN/blob/master/unit_2/w10d1/instructor_notes/Intro_EXPRESS_REACT_VIEWS.md`
+    
+    - `https://www.youtube.com/playlist?list=PLY6oTPmKnKbZsBHeBGNL9suAPIJdLaVk9`
+    
+- React Context: `https://reactjs.org/docs/context.html#when-to-use-context`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<hr/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ## `Things learned/ Reviewed`
+ - How to delete all items at once  
+  - Reviewed cluster creation for MongoDB
+  - The 's' in  `module.exports` _really_ matters! 
+    - Check your exports when presented with this error : _Router.use() requires a middleware function but got a Object_, 
 
-### Code Splitting
+- 'await' only works in an async funtion. 
+    - Check the function for 'async' if you get this error:  _SyntaxError: await is only valid in async function_
+    - when using _async-await_, also use the _try-catch_ to catch errors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - In Authorization, ensure there is a space after bearer. It can be written as either one of the following:
+    - Authorization: "bearer " + token  NOT "bearer" + token 
+    - Authorization: `bearer ` + token NOT `bearer` + token
 
-### Analyzing the Bundle Size
+<hr/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ ## `Possible Next Steps` 
+ - Use library like Passport to pull google API and use for authentication. 
+    - https://www.geeksforgeeks.org/nodejs-authentication-using-passportjs-and-passport-local-mongoose/
+    - http://www.passportjs.org/packages/passport-google-oauth20/
+  - Add path login with directing users to use Google account   
+  - Add ability to edit individual items on the list. 
+  - Add conditionals that send alert when form is incomplete, or user already exists
+- Create 404 error page for when a link is not functional 
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<hr/>
+<hr/>
