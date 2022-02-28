@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // SIGNUP
+        // fetch("http://localhost:3000/auth/signup", {
+        //     method: "post",
+        //     headers: {
+        //         "Content-type": "application/json"
+        //     },
+        //     body: JSON.stringify({username: "truc", password:"truc"})
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+
+        // LOGIN
+        // fetch("http://localhost:3000/auth/login", {
+        //     method: "post",
+        //     headers: {
+        //         "Content-type": "application/json"
+        //     },
+        //     body: JSON.stringify({username: "truc", password:"truc"})
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+
+     
+       
+    //    // CREATE
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRydWMiLCJpYXQiOjE2MjU2MDU2NzJ9.07aOBe_ymZ9lvKqD1ceOayWEoKLJhUJ0EBJsQGmqW40"
+    fetch("http://localhost:3000/shoplist/", {
+            method: "post",
+            headers: {
+                "Content-type": "application/json",
+                Authorization: `bearer ${token}`
+            },
+            body: JSON.stringify({shopList: "apples"})
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+
+    
+    </script>
+</body>
+</html>
