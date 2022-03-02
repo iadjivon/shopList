@@ -1,5 +1,5 @@
 # Shopping List
-Deployed: `https://laughing-tesla-200d75.netlify.app/`
+Deployed: https://laughing-tesla-200d75.netlify.app/
 
 ## `Shopping List` 
 This is a MERN stack architecture-based Web application that provides users the ability ...
