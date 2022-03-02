@@ -13,8 +13,7 @@ export const GlobalCtx = React.createContext(null);
 function App() { 
 
   const [gState, setGState] = React.useState({                              //Global state property
-    url:"https://shopp-abnb.herokuapp.com/", 
-    //  url:"http://localhost:3000", 
+    url:"http://shopp-abnb.herokuapp.com/", 
     token: null}); 
 
   React.useEffect(()=>{                                                     // runs page once 
