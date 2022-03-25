@@ -17,7 +17,7 @@ const Home = (props) => {
 
          <div>
            <h1> Add, Delete, DeleteAll.</h1>
-            <h3> Login or Signup to create and keep track of your shopping List. </h3>
+            <h3> Login or Signup to create and keep track of your shopping list. </h3>
 
             <div className="mock-auth-home"> 
             <div className="mock-auth-reg">

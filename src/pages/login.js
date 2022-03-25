@@ -57,9 +57,9 @@ const Login = (props) => {
             <Header />
             <h1 className="auth"> Login </h1>
             <form onSubmit = {handleSubmit}>
-               <input type="text" name="username" value={form.username} onChange={handleChange} className="authform" placeholder="Enter your email"/>
+               <input type="text" name="username" placeholder = "try `bob` here" value={form.username} onChange={handleChange} className="authform" placeholder="Enter your email"/>
                  <br/>
-               <input type="password" name="password" value={form.password} onChange={handleChange} className="authform" placeholder="Enter a password"/>
+               <input type="password" name="password" placeholder = "try `bob` here" value={form.password} onChange={handleChange} className="authform" placeholder="Enter a password"/>
                  <br/>
                <input type="submit" value="Login"  className="authform-button"/>
             </form>
